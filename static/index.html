@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<main>
-    <h1>Найди себе друга!</h1>
-
-    <!--Форму размещай тут-->
-
-</main>
+    <main>
+        <h1>Найди себе друга!</h1>
+        <form action="/pets/orders" method="POST" id="form">
+            <label>
+                Тип животного
+                <select name="petType">
+                    <option value="cat">Кошечка</option>
+                    <option value="dog">Собачка</option>
+                    <option value="tiger">Тигррр</option>
+                </select>
+            </label>
+            <br>
+            <label>Пол
+                <br>
+                <label>
+                    <input type="radio" name="gender" value="boy"> Мальчик
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="gender" value="girl"> Девочка
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="gender" value="none"> Не определился
+                </label>
+            </label>
+            <br>
+            <label>
+                Цвет глаз
+                <input type="color" name="eyeColor">
+            </label>
+            <br>
+            <label>
+                Длина хвоста
+                <input type="number" name="tailLength" value="20">
+            </label>
+            <br>
+            <label>
+                Имя
+                <input type="text" name="name" placeholder="Ваше имя">
+            </label>
+            <br>
+            <label>
+                Дата рождения
+                <input type="date" name="dateOfBirth">
+            </label>
+            <br>
+            <label>
+                Ваш email
+                <input type="email" name="email" placeholder="Ваш Email">
+            </label>
+            <br>
+            <label>
+                Ваш номер телефона
+                <input type="tel" name="phone">
+            </label>
+            <br>
+            <label>
+                Я согласен с условиями
+                <input type="checkbox" name="rules" value="true" checked>
+            </label>
+            <br>
+            <input type="submit" name="submit" value="Отправить">
+            <input type="reset" name="reset" value="Очистить форму">
+        </form>
+    </main>
 </body>
+
 </html>
